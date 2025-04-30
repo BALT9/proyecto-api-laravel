@@ -48,7 +48,8 @@ class AuthController extends Controller
     }
     public function funPerfil(Request $request){
         // procesar
-        return response()->json($request->user(), 201);
+        $user = $request->user();
+        return response()->json($user, 201);
     }
     public function funSalir(Request $request){
         // procesar
